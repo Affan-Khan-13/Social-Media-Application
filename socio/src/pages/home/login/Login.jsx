@@ -36,7 +36,7 @@ export default function Login()
                     minLength="6"
                     className="loginInput" 
                     ref={password} />
-                    <button className="loginButton">{isFetching ? <PendingIcon/> :"Log In"}</button>
+                    <button className="loginButton" type="submit" disabled={isFetching}>{isFetching ? <PendingIcon/> :"Log In"}</button>
                     <span className="loginForgot">Forgot Password ?</span>
                     <button className="loginRegisterButton">{isFetching ? <PendingIcon/> :"Create a new Account"}</button>
                 </form>
