@@ -19,7 +19,7 @@ const submitHandler = async (e) => {
   }
   if(file){
     const data = new FormData();
-    const fileName = Date.now() + file.name
+    const fileName =   file.name
     data.append("file",file);
     data.append("name", fileName);
     newPost.img = fileName;

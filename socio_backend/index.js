@@ -17,10 +17,9 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }).then(() => co
 
 
 
-
 //middleware
 app.use(express.json());
-app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
